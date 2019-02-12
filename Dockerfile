@@ -11,7 +11,7 @@ RUN apt update && apt install -y ca-certificates phantomjs curl wget libasound2 
 	apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* /var/tmp/* && \
 	rm *.deb && rm *.zip
 
-RUN mkdir /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
+RUN mkdir -p /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
 ADD xvfb.sh /bin/start_xvfb
 RUN chmod +x /bin/start_xvfb
 
