@@ -2,7 +2,7 @@ FROM gliderlabs/herokuish:latest
   
 RUN apt update && apt install -y ca-certificates phantomjs curl wget libasound2 libnspr4 libnss3 \
 	fonts-liberation fontconfig pcregrep libappindicator3-1 libxss1 lsb-release xdg-utils \
-	unzip xvfb libxi6 libgconf-2-4 unzip git build-essential python-dev python-pip && \
+	unzip xvfb libxi6 libgconf-2-4 unzip git build-essential python-dev python-pip python3-pip && \
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
         dpkg -i google-chrome*.deb && \
         wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip && \
