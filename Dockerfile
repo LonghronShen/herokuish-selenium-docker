@@ -16,3 +16,9 @@ ADD xvfb.sh /bin/start_xvfb
 RUN chmod +x /bin/start_xvfb
 
 ENV DISPLAY :99
+
+ENV NODE_VERSION=10.15.3
+
+RUN curl https://deb.nodesource.com/node_10.x/pool/main/n/nodejs/nodejs_$NODE_VERSION-1nodesource1_amd64.deb > node.deb \
+ && dpkg -i node.deb \
+ && rm node.deb
